@@ -4,10 +4,10 @@ import random
 from string import ascii_uppercase
 
 app = Flask(__name__)
-app.comfig["SECRET_KEY"] = "HHGGHKK"
+app.config["SECRET_KEY"] = "hjskksk"
 socketio = SocketIO(app)
 
 if __name__ == "__main__":
-    socketio.run(app,debug=True)
+    socketio.run(app, debug=True)
 
 
