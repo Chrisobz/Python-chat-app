@@ -53,8 +53,9 @@ body {
 }
 
 .messages {
+  overflow-y: scroll;
   flex: 1;
-  padding: 10px;
+  width: 100%;
 }
 
 .inputs {
@@ -75,4 +76,11 @@ h2 {
 .muted {
   font-size: 12px; /* Slightly bigger for readability */
   color: #adb5bd; /* Bootstrap gray color */
+}
+
+.user-message {
+  background-color: #007BFF; /* A dark blue from Bootstrap's primary color */
+  color: white; /* To make the text visible on the dark background */
+  border-radius: 5px; /* Optional, to make the messages look rounded */
+  padding: 5px 10px; /* Space around the text in the message */
 }

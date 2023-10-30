@@ -27,10 +27,11 @@
   var socketio = io();
   const messages = document.getElementById("messages");
 
-  const createMessage = (name, msg) => {
+  const createMessage = (name, msg, isUser) => {
+    const bgClass = isUser ? "user-message" : "";
     const content = `
     <li class="list-group-item">
-        <div class="media">
+        <div class="media ${bgClass}">
             <div class="media-body">
                 <strong>${name}</strong>: ${msg}
                 <div class="muted">${new Date().toLocaleString()}</div>
@@ -39,7 +40,7 @@
     </li>
     `;
     messages.innerHTML += content;
-  };
+};
 
   socketio.on("message", (data) => {
     createMessage(data.name, data.message);
